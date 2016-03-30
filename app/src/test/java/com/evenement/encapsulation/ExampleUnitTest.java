@@ -1,4 +1,4 @@
-package com.evenement.encapsulation;
+package com.evenement.eveControl;
 
 import org.junit.Test;
 
