@@ -1,8 +1,12 @@
-# eve-control
+eve-control
+============
+
 Android Application to control tickets with an existing e-venement instance.
 
-On app launch, the user is prompted to enter the host name of his e-venement instance as well as his login credentials wich will be stored for future authentifications.
+When the app is launched, the user is prompted to enter the host name of his e-venement instance as well as his login credentials wich will be stored for future authentifications.
+
 Once the form submitted, the app will connect to the instance's server and display the access control page (tck.php/ticket/control), and tickets can be controlled directly from there.
+
 During use, the app will automatically re-authenticate the user on server periodically to keep the session alive as long as needed.
 
 Installation :
