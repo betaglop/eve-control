@@ -18,5 +18,5 @@ Debug builds are stored in %PROJECT_HOME%/app/build/intermediates/outputs/apk/.
 
 Details:
 
-The app connects to the e-venement instance using HttpUrlConnection, then passes its cookies to a webview wich displays the control page.Login credentials and host name are stored through android sharedPreferences mechanism.Login and session extending network tasks, are executed in AsyncTasks not to freeze the main (UI) thread.
+The app connects to the e-venement instance using HttpUrlConnection, then passes its cookies to a webview wich displays the control page.Login credentials and host name are stored through android sharedPreferences mechanism.Login and session extending network tasks, are executed in AsyncTasks not to freeze the main (UI) thread.The login form has been put in a fragment acting as a slide drawer.
 
