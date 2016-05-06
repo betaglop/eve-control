@@ -1,4 +1,4 @@
-package com.evenement.encapsulation;
+package com.evenement.eveControl;
 
 import android.app.ProgressDialog;
 import android.content.Context;
@@ -171,7 +171,7 @@ public class LoginTask extends AsyncTask<String, String, Boolean> {
 
             InputStream stream = null;
             try {
-
+		HttpsURLConnection.setDefaultHostnameVerifier(new HostVerifier());
                 connection = (HttpsURLConnection) url.openConnection();
                 connection.setDoInput(true);
                 connection.setRequestMethod("GET");

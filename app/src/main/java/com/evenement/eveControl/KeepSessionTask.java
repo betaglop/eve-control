@@ -127,7 +127,7 @@ public class KeepSessionTask extends AsyncTask<String, String, Boolean> {
             assignTrustManager();
 
             try {
-
+		HttpsURLConnection.setDefaultHostnameVerifier(new HostVerifier());
                 connection = (HttpsURLConnection) url.openConnection();
                 connection.setDoInput(true);
                 connection.setRequestMethod("GET");

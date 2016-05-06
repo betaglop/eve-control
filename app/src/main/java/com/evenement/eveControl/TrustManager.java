@@ -21,6 +21,6 @@ public class TrustManager implements X509TrustManager {
 
     @Override
     public java.security.cert.X509Certificate[] getAcceptedIssuers() {
-        return new java.security.cert.X509Certificate[0];
+        return null;
     }
 }

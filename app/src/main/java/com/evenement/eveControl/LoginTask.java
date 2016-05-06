@@ -171,7 +171,7 @@ public class LoginTask extends AsyncTask<String, String, Boolean> {
 
             InputStream stream = null;
             try {
-
+		HttpsURLConnection.setDefaultHostnameVerifier(new HostVerifier());
                 connection = (HttpsURLConnection) url.openConnection();
                 connection.setDoInput(true);
                 connection.setRequestMethod("GET");
