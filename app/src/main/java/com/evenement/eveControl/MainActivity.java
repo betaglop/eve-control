@@ -37,7 +37,7 @@ public class MainActivity extends AppCompatActivity {
 
         setupSharedPreferences();
 
-        /* DEBUGGING: used to reset sharedprefertences on launch */
+        /* DEBUGGING: used to reset sharedpreferences on launch */
 
         //SharedPreferences.Editor editor= preferences.edit();
         //editor.remove("username");
