@@ -87,6 +87,8 @@ public class MainActivity extends AppCompatActivity {
                 .beginTransaction()
                 .replace(R.id.content_frame_new, navFragment,
                         "NavFragment").commit();
+
+        getSupportActionBar().hide();
     }
 
 
@@ -96,7 +98,6 @@ public class MainActivity extends AppCompatActivity {
     private void setupWebview() {
 
         webView = (WebView) findViewById(R.id.webview);
-        assert webView != null;
         WebSettings settings = webView.getSettings();
 
         settings.setJavaScriptEnabled(true);
