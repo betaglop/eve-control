@@ -37,17 +37,6 @@ public class MainActivity extends AppCompatActivity {
 
         setupSharedPreferences();
 
-        /* DEBUGGING: used to reset sharedpreferences on launch */
-
-        //SharedPreferences.Editor editor= preferences.edit();
-        //editor.remove("username");
-        //editor.remove("password");
-        //editor.remove("server");
-        //editor.clear();
-        //editor.commit();
-
-        /* DEBUGGING */
-
         setupCookieManager();
 
         //assign main content to frame
