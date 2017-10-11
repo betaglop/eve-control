@@ -1,0 +1,142 @@
+/**********************************************************************************
+*
+*     This file is part of eve-control.
+*
+*    eve-control is free software; you can redistribute it and/or modify
+*    it under the terms of the GNU General Public License as published by
+*    the Free Software Foundation; either version 2 of the License.
+*
+*    eve-control is distributed in the hope that it will be useful,
+*    but WITHOUT ANY WARRANTY; without even the implied warranty of
+*    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+*    GNU General Public License for more details.
+*
+*    You should have received a copy of the GNU General Public License
+*    along with eve-control; if not, write to the Free Software
+*    Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
+*
+*    Copyright (c) 2017 Romain SANCHEZ <romain.sanchez AT libre-informatique.fr>
+*    Copyright (c) 2017 Libre Informatique [http://www.libre-informatique.fr/]
+*
+***********************************************************************************/
+
+/* Portrait layout (default) */
+body {
+  overflow: hidden;
+}
+
+#app {
+  width: 100%;
+}
+
+.row {
+  margin-bottom: 0;
+}
+
+.row .col.s12.full-width {
+  padding: 0;
+}
+
+#tabs {
+  width: 100%;
+  height: 70px;
+}
+#tabs .tab {
+  height: 70px;
+  line-height: 90px;
+}
+
+#tabs .material-icons {
+  font-size: 2.3em;
+}
+
+.tabs .tab a, .tabs .tab a:hover, .tabs .tab a.active {
+  background-color: transparent;
+  color: #03a9f4;
+}
+
+.tabs .indicator {
+  background-color: #03a9f4;
+  height: 3px;
+}
+
+#tabs-content {
+  height: 100%;
+}
+
+#config, #history, #control: {
+  width: 100%;
+  height: 100%;
+}
+
+#tabs {
+  overflow: hidden;
+}
+
+.tab-content.carousel-item {
+  height: 100%;
+}
+
+#ticket-id {
+  opacity: 0;
+  height: 0px;
+}
+
+#ticket-id:hover {
+  cursor: default;
+}
+
+#slide-out .switch {
+  float: right;
+}
+
+#slide-out .switch label {
+  top: initial;
+  left: initial;
+  right: 0;
+  top: -2px;
+}
+
+#main-tab, #history-tab {
+  overflow: hidden;
+}
+
+#history-list {
+  height: 75vh;
+  overflow-y: auto;
+  padding: 0.75rem;
+}
+
+#result {
+  height: 60vh;
+  overflow-y: auto;
+}
+
+#loader {
+  position: absolute;
+  top: 200px;
+  left: 100px;
+  width: 100px;
+  height: 100px;
+  z-index: 1000;
+}
+
+#volume {
+  display: inline-block;
+  margin-bottom: -20px;
+  margin-left: 10px;
+  width: 72%;
+}
+
+.volume-slider .col {
+  margin-top: 0;
+}
+
+div.mdc-slider__focus-ring, div.mdc-slider__pin, div.mdc-slider__track {
+  background-color: #009688;
+}
+
+svg.mdc-slider__thumb circle{
+  fill: #009688;
+  stroke: #009688;
+}
