@@ -27,6 +27,7 @@ var app = {
     token: '',
     controlToken: '',
     history: [],
+    lastId: '',
     urls: {
       login: '/default.php/login',
       control: '/tck.php/ticket/control',
@@ -174,15 +175,24 @@ var app = {
     },
     control: {
       doControl: function() {
-        app.utils.showLoader();
-
         var ticketId = $('#ticket-id').val();
         // Clear ticket id
         $('#ticket-id').val('');
 
+        if(ticketId == app.lastId) {
+          setTimeout(function() {
+            app.lastId = null;
+          }, app.settings.redondancy * 1000);
+
+          return;
+        }
+
+        app.utils.showLoader();
+        $('#result').empty();
+
         // Retrieve CSRF token then send control request
         $.when(app.control.getCSRF())
-        .then(function() {
+         .then(function() {
           if(!app.controlToken) {
             app.loggedIn = false;
             app.authenticate();
@@ -206,6 +216,8 @@ var app = {
               checkpoint_id: checkpointId 
             }
           };
+
+          app.lastId = ticketId;
 
           $.post(controlUrl, postData, app.control.handleResponse);
         });
@@ -305,7 +317,8 @@ var app = {
         volume: $('#volume').attr('aria-valuenow'),
         screen: $('#screen').prop('checked'),
         history: $('#history').prop('checked'),
-        public: $('#public').prop('checked')
+        public: $('#public').prop('checked'),
+        redondancy: $('#redondancy').val()
       }
 
       NativeStorage.setItem('settings', settings, app.utils.applySettings, app.utils.error);
@@ -388,6 +401,7 @@ var app = {
         $('#volume').attr('aria-valuenow', app.settings.volume);
         $('#screen').prop('checked', app.settings.screen);
         $('#history').prop('checked', app.settings.history);
+        $('#redondancy').val(app.settings.redondancy);
 
         Materialize.updateTextFields();
 
@@ -442,7 +456,7 @@ var app = {
             stroke: '#26A69A'
           });
         } else {
-          $('#volume').addClass('mdc-slider--disabled');
+          $('#volume').addClass('mdc-slider--disabled');  
           $('.mdc-slider__thumb circle').css({
             fill: 'grey',
             stroke: 'grey'

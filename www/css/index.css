@@ -112,6 +112,10 @@ body {
   overflow-y: auto;
 }
 
+#settings-form {
+  margin-top: 15px;
+}
+
 #loader {
   position: absolute;
   top: 200px;
