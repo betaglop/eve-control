@@ -1,36 +1,36 @@
 {
-    "name": "fr.librinfo.evecontrol",
-    "version": "2.0.0",
-    "displayName": "Eve-control",
-    "cordova": {
-        "platforms": [
-            "android",
-            "browser"
-        ],
-        "plugins": {
-            "cordova-plugin-whitelist": {},
-            "cordova-plugin-nativestorage": {},
-            "cordova-plugin-network-information": {},
-            "cordova-plugin-media": {},
-            "cordova-plugin-insomnia": {},
-            "cordova-plugin-keyboard": {},
-            "com.bez4pieci.cookies": {},
-            "cordova-plugin-android-volume": {}
-        }
-    },
-    "dependencies": {
-        "com.bez4pieci.cookies": "https://github.com/bez4pieci/Phonegap-Cookies-Plugin.git",
-        "cordova-android": "^6.2.3",
-        "cordova-browser": "^4.1.0",
-        "cordova-plugin-android-volume": "0.0.6",
-        "cordova-plugin-compat": "^1.1.0",
-        "cordova-plugin-file": "^4.3.3",
-        "cordova-plugin-insomnia": "git+https://github.com/EddyVerbruggen/Insomnia-PhoneGap-Plugin.git",
-        "cordova-plugin-keyboard": "^1.1.5",
-        "cordova-plugin-media": "^3.0.1",
-        "cordova-plugin-nativestorage": "^2.2.2",
-        "cordova-plugin-network-information": "^1.3.3",
-        "cordova-plugin-whitelist": "^1.3.2",
-        "cordova-remove-cookies": "git+https://github.com/bez4pieci/Phonegap-Cookies-Plugin.git"
+  "name": "fr.librinfo.evecontrol",
+  "version": "2.0.0",
+  "displayName": "Eve-control",
+  "cordova": {
+    "platforms": [
+      "android",
+      "browser"
+    ],
+    "plugins": {
+      "cordova-plugin-whitelist": {},
+      "cordova-plugin-nativestorage": {},
+      "cordova-plugin-network-information": {},
+      "cordova-plugin-media": {},
+      "cordova-plugin-insomnia": {},
+      "cordova-plugin-keyboard": {},
+      "com.bez4pieci.cookies": {},
+      "cordova-plugin-android-volume": {}
     }
+  },
+  "dependencies": {
+    "com.bez4pieci.cookies": "https://github.com/bez4pieci/Phonegap-Cookies-Plugin.git",
+    "cordova-android": "^6.2.3",
+    "cordova-browser": "^5.0.1",
+    "cordova-plugin-android-volume": "0.0.6",
+    "cordova-plugin-compat": "^1.1.0",
+    "cordova-plugin-file": "^4.3.3",
+    "cordova-plugin-insomnia": "git+https://github.com/EddyVerbruggen/Insomnia-PhoneGap-Plugin.git",
+    "cordova-plugin-keyboard": "^1.1.5",
+    "cordova-plugin-media": "^3.0.1",
+    "cordova-plugin-nativestorage": "^2.2.2",
+    "cordova-plugin-network-information": "^1.3.3",
+    "cordova-plugin-whitelist": "^1.3.2",
+    "cordova-remove-cookies": "git+https://github.com/bez4pieci/Phonegap-Cookies-Plugin.git"
+  }
 }
