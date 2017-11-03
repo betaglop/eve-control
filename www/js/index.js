@@ -118,7 +118,7 @@ var app = {
         path.pop();
         path = path.join('/');
 
-        app.media.controlError = new Media(path + '/media/beep.mp3', app.media.success, app.utils.error);
+        app.media.controlError = new Media(path + '/media/triplebeep.mp3', app.media.success, app.utils.error);
         app.media.controlSuccess = new Media(path + '/media/beep.mp3', app.media.success, app.utils.error);
       },
       play: function(success) {
@@ -129,7 +129,7 @@ var app = {
           return;
         }
 
-        //app.media.controlError.play();
+        app.media.controlError.play();
       },
       success: function() {
         console.log('sound success'); 
