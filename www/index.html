@@ -221,7 +221,16 @@
 
     <!-- HANDLEBARS TEMPLATES -->
     <script id="control-result-template" type="text/x-handlebars-template">
-        <div class="card {{#if success}} teal {{else}} red {{/if}} lighten">
+        <div class="card 
+        {{#if success}} 
+          teal 
+        {{else}}
+          {{#if warning}}
+            orange
+          {{else}}
+            red 
+          {{/if}}
+        {{/if}} lighten">
           <div class="card-content white-text">
             <p class="timestamp">{{ timestamp }}</p>
             <span class="card-title">{{#if success}} Valide {{else}} Erreur {{/if}}</span>
@@ -242,7 +251,16 @@
 
     <script id="history-template" type="text/x-handlebars-template">
       <li class="">
-        <div class="card {{#if success}} teal {{else}} red {{/if}} lighten">
+        <div class="card 
+        {{#if success}} 
+          teal 
+        {{else}}
+          {{#if warning}}
+            orange
+          {{else}}
+            red 
+          {{/if}}
+        {{/if}} lighten">
           <div class="card-content white-text">
             <p class="timestamp">{{ timestamp }}</p>
             <span class="card-title">{{#if success}} Valide {{else}} Erreur {{/if}}</span>
@@ -255,7 +273,7 @@
               <p>{{ price }}</p>
             {{/each}}
             {{#unless success}}
-              {{ error }}
+              {{{ error }}}
             {{/unless}}
           </div>
         </div>

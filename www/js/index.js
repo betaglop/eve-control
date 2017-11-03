@@ -224,6 +224,8 @@ var app = {
       },
       // Handle control result
       handleResponse: function(response) {
+        var warningCodes = [1002, 1003, 1005, 1006];
+
         if(!response.success) {
           console.error(response);
           response.error = response.details.control.errors.join(', ');
@@ -233,6 +235,10 @@ var app = {
 
         if(app.settings.sound) {
           app.media.play(response.success);
+        }
+
+        if(warningCodes.indexOf(response.code) != -1) {
+          response.warning = true;
         }
 
         app.history.save(response);
