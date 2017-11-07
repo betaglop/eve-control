@@ -1,0 +1,43 @@
+{
+    "prepare_queue": {
+        "installed": [],
+        "uninstalled": []
+    },
+    "config_munge": {
+        "files": {}
+    },
+    "installed_plugins": {
+        "com.bez4pieci.cookies": {
+            "PACKAGE_NAME": "fr.librinfo.evecontrol"
+        },
+        "cordova-plugin-insomnia": {
+            "PACKAGE_NAME": "fr.librinfo.evecontrol"
+        },
+        "cordova-plugin-keyboard": {
+            "PACKAGE_NAME": "fr.librinfo.evecontrol"
+        },
+        "cordova-plugin-media": {
+            "PACKAGE_NAME": "fr.librinfo.evecontrol"
+        },
+        "cordova-plugin-nativestorage": {
+            "PACKAGE_NAME": "fr.librinfo.evecontrol"
+        },
+        "cordova-plugin-network-information": {
+            "PACKAGE_NAME": "fr.librinfo.evecontrol"
+        },
+        "cordova-plugin-whitelist": {
+            "PACKAGE_NAME": "fr.librinfo.evecontrol"
+        },
+        "cordova-plugin-android-volume": {
+            "PACKAGE_NAME": "fr.librinfo.evecontrol"
+        }
+    },
+    "dependent_plugins": {
+        "cordova-plugin-compat": {
+            "PACKAGE_NAME": "fr.librinfo.evecontrol"
+        },
+        "cordova-plugin-file": {
+            "PACKAGE_NAME": "fr.librinfo.evecontrol"
+        }
+    }
+}
