@@ -255,6 +255,14 @@ module.exports = [
         "clobbers": [
             "androidVolume"
         ]
+    },
+    {
+        "id": "cordova-plugin-crosswalk-certificate.Certificates",
+        "file": "plugins/cordova-plugin-crosswalk-certificate/www/certificate.js",
+        "pluginId": "cordova-plugin-crosswalk-certificate",
+        "clobbers": [
+            "cordova.plugins.certificates"
+        ]
     }
 ];
 module.exports.metadata = 
@@ -269,7 +277,9 @@ module.exports.metadata =
     "cordova-plugin-nativestorage": "2.2.2",
     "cordova-plugin-network-information": "1.3.3",
     "cordova-plugin-whitelist": "1.3.2",
-    "cordova-plugin-android-volume": "0.0.1"
+    "cordova-plugin-android-volume": "0.0.1",
+    "cordova-plugin-crosswalk-webview": "2.3.0",
+    "cordova-plugin-crosswalk-certificate": "2.0.1"
 };
 // BOTTOM OF METADATA
 });

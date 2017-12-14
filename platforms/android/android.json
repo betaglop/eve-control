@@ -39,6 +39,38 @@
             {
               "xml": "<feature name=\"Whitelist\"><param name=\"android-package\" value=\"org.apache.cordova.whitelist.WhitelistPlugin\" /><param name=\"onload\" value=\"true\" /></feature>",
               "count": 1
+            },
+            {
+              "xml": "<preference name=\"webView\" value=\"org.crosswalk.engine.XWalkWebViewEngine\" />",
+              "count": 1
+            },
+            {
+              "xml": "<preference name=\"xwalkVersion\" value=\"23+\" />",
+              "count": 1
+            },
+            {
+              "xml": "<preference name=\"xwalkLiteVersion\" value=\"xwalk_core_library_canary:17+\" />",
+              "count": 1
+            },
+            {
+              "xml": "<preference name=\"xwalkCommandLine\" value=\"--disable-pull-to-refresh-effect\" />",
+              "count": 1
+            },
+            {
+              "xml": "<preference name=\"xwalkMode\" value=\"embedded\" />",
+              "count": 1
+            },
+            {
+              "xml": "<preference name=\"xwalkMultipleApk\" value=\"true\" />",
+              "count": 1
+            },
+            {
+              "xml": "<preference name=\"android-minSdkVersion\" value=\"16\" />",
+              "count": 1
+            },
+            {
+              "xml": "<feature name=\"CertificatesPlugin\"><param name=\"android-package\" value=\"com.danjarvis.cordova.plugins.CertificatesPlugin\" /></feature>",
+              "count": 1
             }
           ]
         }
@@ -64,6 +96,10 @@
             },
             {
               "xml": "<uses-permission android:name=\"android.permission.ACCESS_NETWORK_STATE\" />",
+              "count": 2
+            },
+            {
+              "xml": "<uses-permission android:name=\"android.permission.ACCESS_WIFI_STATE\" />",
               "count": 1
             }
           ],
@@ -116,6 +152,17 @@
     },
     "cordova-plugin-android-volume": {
       "PACKAGE_NAME": "fr.librinfo.evecontrol"
+    },
+    "cordova-plugin-crosswalk-webview": {
+      "XWALK_VERSION": "23+",
+      "XWALK_LITEVERSION": "xwalk_core_library_canary:17+",
+      "XWALK_COMMANDLINE": "--disable-pull-to-refresh-effect",
+      "XWALK_MODE": "embedded",
+      "XWALK_MULTIPLEAPK": "true",
+      "PACKAGE_NAME": "fr.librinfo.evecontrol2"
+    },
+    "cordova-plugin-crosswalk-certificate": {
+      "PACKAGE_NAME": "fr.librinfo.evecontrol2"
     }
   },
   "dependent_plugins": {},
@@ -375,6 +422,14 @@
       "clobbers": [
         "androidVolume"
       ]
+    },
+    {
+      "id": "cordova-plugin-crosswalk-certificate.Certificates",
+      "file": "plugins/cordova-plugin-crosswalk-certificate/www/certificate.js",
+      "pluginId": "cordova-plugin-crosswalk-certificate",
+      "clobbers": [
+        "cordova.plugins.certificates"
+      ]
     }
   ],
   "plugin_metadata": {
@@ -387,6 +442,8 @@
     "cordova-plugin-nativestorage": "2.2.2",
     "cordova-plugin-network-information": "1.3.3",
     "cordova-plugin-whitelist": "1.3.2",
-    "cordova-plugin-android-volume": "0.0.1"
+    "cordova-plugin-android-volume": "0.0.1",
+    "cordova-plugin-crosswalk-webview": "2.3.0",
+    "cordova-plugin-crosswalk-certificate": "2.0.1"
   }
 }

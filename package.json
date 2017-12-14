@@ -15,7 +15,15 @@
       "cordova-plugin-insomnia": {},
       "cordova-plugin-keyboard": {},
       "com.bez4pieci.cookies": {},
-      "cordova-plugin-android-volume": {}
+      "cordova-plugin-android-volume": {},
+      "cordova-plugin-crosswalk-webview": {
+        "XWALK_VERSION": "23+",
+        "XWALK_LITEVERSION": "xwalk_core_library_canary:17+",
+        "XWALK_COMMANDLINE": "--disable-pull-to-refresh-effect",
+        "XWALK_MODE": "embedded",
+        "XWALK_MULTIPLEAPK": "true"
+      },
+      "cordova-plugin-crosswalk-certificate": {}
     }
   },
   "dependencies": {
@@ -24,6 +32,8 @@
     "cordova-browser": "^5.0.1",
     "cordova-plugin-android-volume": "0.0.6",
     "cordova-plugin-compat": "^1.1.0",
+    "cordova-plugin-crosswalk-certificate": "git+https://github.com/danjarvis/cordova-plugin-crosswalk-certificate.git",
+    "cordova-plugin-crosswalk-webview": "^2.3.0",
     "cordova-plugin-file": "^4.3.3",
     "cordova-plugin-insomnia": "git+https://github.com/EddyVerbruggen/Insomnia-PhoneGap-Plugin.git",
     "cordova-plugin-keyboard": "^1.1.5",

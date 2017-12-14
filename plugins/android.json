@@ -1,43 +1,54 @@
 {
-    "prepare_queue": {
-        "installed": [],
-        "uninstalled": []
+  "prepare_queue": {
+    "installed": [],
+    "uninstalled": []
+  },
+  "config_munge": {
+    "files": {}
+  },
+  "installed_plugins": {
+    "com.bez4pieci.cookies": {
+      "PACKAGE_NAME": "fr.librinfo.evecontrol"
     },
-    "config_munge": {
-        "files": {}
+    "cordova-plugin-insomnia": {
+      "PACKAGE_NAME": "fr.librinfo.evecontrol"
     },
-    "installed_plugins": {
-        "com.bez4pieci.cookies": {
-            "PACKAGE_NAME": "fr.librinfo.evecontrol"
-        },
-        "cordova-plugin-insomnia": {
-            "PACKAGE_NAME": "fr.librinfo.evecontrol"
-        },
-        "cordova-plugin-keyboard": {
-            "PACKAGE_NAME": "fr.librinfo.evecontrol"
-        },
-        "cordova-plugin-media": {
-            "PACKAGE_NAME": "fr.librinfo.evecontrol"
-        },
-        "cordova-plugin-nativestorage": {
-            "PACKAGE_NAME": "fr.librinfo.evecontrol"
-        },
-        "cordova-plugin-network-information": {
-            "PACKAGE_NAME": "fr.librinfo.evecontrol"
-        },
-        "cordova-plugin-whitelist": {
-            "PACKAGE_NAME": "fr.librinfo.evecontrol"
-        },
-        "cordova-plugin-android-volume": {
-            "PACKAGE_NAME": "fr.librinfo.evecontrol"
-        }
+    "cordova-plugin-keyboard": {
+      "PACKAGE_NAME": "fr.librinfo.evecontrol"
     },
-    "dependent_plugins": {
-        "cordova-plugin-compat": {
-            "PACKAGE_NAME": "fr.librinfo.evecontrol"
-        },
-        "cordova-plugin-file": {
-            "PACKAGE_NAME": "fr.librinfo.evecontrol"
-        }
+    "cordova-plugin-media": {
+      "PACKAGE_NAME": "fr.librinfo.evecontrol"
+    },
+    "cordova-plugin-nativestorage": {
+      "PACKAGE_NAME": "fr.librinfo.evecontrol"
+    },
+    "cordova-plugin-network-information": {
+      "PACKAGE_NAME": "fr.librinfo.evecontrol"
+    },
+    "cordova-plugin-whitelist": {
+      "PACKAGE_NAME": "fr.librinfo.evecontrol"
+    },
+    "cordova-plugin-android-volume": {
+      "PACKAGE_NAME": "fr.librinfo.evecontrol"
+    },
+    "cordova-plugin-crosswalk-webview": {
+      "XWALK_VERSION": "23+",
+      "XWALK_LITEVERSION": "xwalk_core_library_canary:17+",
+      "XWALK_COMMANDLINE": "--disable-pull-to-refresh-effect",
+      "XWALK_MODE": "embedded",
+      "XWALK_MULTIPLEAPK": "true",
+      "PACKAGE_NAME": "fr.librinfo.evecontrol2"
+    },
+    "cordova-plugin-crosswalk-certificate": {
+      "PACKAGE_NAME": "fr.librinfo.evecontrol2"
     }
+  },
+  "dependent_plugins": {
+    "cordova-plugin-compat": {
+      "PACKAGE_NAME": "fr.librinfo.evecontrol"
+    },
+    "cordova-plugin-file": {
+      "PACKAGE_NAME": "fr.librinfo.evecontrol"
+    }
+  }
 }

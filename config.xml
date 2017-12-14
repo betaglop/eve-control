@@ -32,4 +32,12 @@
     <plugin name="cordova-plugin-keyboard" spec="^1.1.5" />
     <plugin name="com.bez4pieci.cookies" spec="https://github.com/bez4pieci/Phonegap-Cookies-Plugin.git" />
     <plugin name="cordova-plugin-android-volume" spec="0.0.6" />
+    <plugin name="cordova-plugin-crosswalk-webview" spec="^2.3.0">
+        <variable name="XWALK_VERSION" value="23+" />
+        <variable name="XWALK_LITEVERSION" value="xwalk_core_library_canary:17+" />
+        <variable name="XWALK_COMMANDLINE" value="--disable-pull-to-refresh-effect" />
+        <variable name="XWALK_MODE" value="embedded" />
+        <variable name="XWALK_MULTIPLEAPK" value="true" />
+    </plugin>
+    <plugin name="cordova-plugin-crosswalk-certificate" spec="git+https://github.com/danjarvis/cordova-plugin-crosswalk-certificate.git" />
 </widget>

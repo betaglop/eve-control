@@ -1,0 +1,93 @@
+{
+  "_args": [
+    [
+      {
+        "raw": "https://github.com/danjarvis/cordova-plugin-crosswalk-certificate",
+        "scope": null,
+        "escapedName": null,
+        "name": null,
+        "rawSpec": "https://github.com/danjarvis/cordova-plugin-crosswalk-certificate",
+        "spec": "git+https://github.com/danjarvis/cordova-plugin-crosswalk-certificate.git",
+        "type": "hosted",
+        "hosted": {
+          "type": "github",
+          "ssh": "git@github.com:danjarvis/cordova-plugin-crosswalk-certificate.git",
+          "sshUrl": "git+ssh://git@github.com/danjarvis/cordova-plugin-crosswalk-certificate.git",
+          "httpsUrl": "git+https://github.com/danjarvis/cordova-plugin-crosswalk-certificate.git",
+          "gitUrl": "git://github.com/danjarvis/cordova-plugin-crosswalk-certificate.git",
+          "shortcut": "github:danjarvis/cordova-plugin-crosswalk-certificate",
+          "directUrl": "https://raw.githubusercontent.com/danjarvis/cordova-plugin-crosswalk-certificate/master/package.json"
+        }
+      },
+      "/home/mawcel/Projects/eve-control2"
+    ]
+  ],
+  "_from": "git+https://github.com/danjarvis/cordova-plugin-crosswalk-certificate.git",
+  "_id": "cordova-plugin-crosswalk-certificate@2.0.1",
+  "_inCache": true,
+  "_location": "/cordova-plugin-crosswalk-certificate",
+  "_phantomChildren": {},
+  "_requested": {
+    "raw": "https://github.com/danjarvis/cordova-plugin-crosswalk-certificate",
+    "scope": null,
+    "escapedName": null,
+    "name": null,
+    "rawSpec": "https://github.com/danjarvis/cordova-plugin-crosswalk-certificate",
+    "spec": "git+https://github.com/danjarvis/cordova-plugin-crosswalk-certificate.git",
+    "type": "hosted",
+    "hosted": {
+      "type": "github",
+      "ssh": "git@github.com:danjarvis/cordova-plugin-crosswalk-certificate.git",
+      "sshUrl": "git+ssh://git@github.com/danjarvis/cordova-plugin-crosswalk-certificate.git",
+      "httpsUrl": "git+https://github.com/danjarvis/cordova-plugin-crosswalk-certificate.git",
+      "gitUrl": "git://github.com/danjarvis/cordova-plugin-crosswalk-certificate.git",
+      "shortcut": "github:danjarvis/cordova-plugin-crosswalk-certificate",
+      "directUrl": "https://raw.githubusercontent.com/danjarvis/cordova-plugin-crosswalk-certificate/master/package.json"
+    }
+  },
+  "_requiredBy": [
+    "#USER",
+    "/"
+  ],
+  "_resolved": "git+https://github.com/danjarvis/cordova-plugin-crosswalk-certificate.git#d94d92cdf7c4440d92614eb04332af6b0fb1de3e",
+  "_shasum": "4dbcad750a4be5e2359cc3f00967ce00fadb594d",
+  "_shrinkwrap": null,
+  "_spec": "https://github.com/danjarvis/cordova-plugin-crosswalk-certificate",
+  "_where": "/home/mawcel/Projects/eve-control2",
+  "author": {
+    "name": "Daniel Jarvis"
+  },
+  "bugs": {
+    "url": "https://github.com/danjarvis/cordova-plugin-crosswalk-certificate/issues"
+  },
+  "cordova": {
+    "id": "cordova-plugin-crosswalk-certificate",
+    "platforms": [
+      "android",
+      "ios"
+    ]
+  },
+  "dependencies": {},
+  "description": "Cordova plugin to enable the use of untrusted (self-signed) SSL Certificates with Crosswalk.",
+  "devDependencies": {},
+  "gitHead": "d94d92cdf7c4440d92614eb04332af6b0fb1de3e",
+  "homepage": "https://github.com/danjarvis/cordova-plugin-crosswalk-certificate#readme",
+  "keywords": [
+    "cordova",
+    "crosswalk",
+    "certificates",
+    "ecosystem:cordova",
+    "cordova-android",
+    "cordova-ios"
+  ],
+  "license": "MIT",
+  "name": "cordova-plugin-crosswalk-certificate",
+  "optionalDependencies": {},
+  "readme": "Cordova Plugin Crosswalk Certificate\n====================================\n\n[Cordova](http://cordova.apache.org) plugin to enable the use of untrusted (self-signed) SSL Certificates.\n\n## Install\n\nTo use this plugin with cordova-android 3.x install v1.x, which is compatible with the [crosswalk web view](https://crosswalk-project.org/) v10.x used with cordova-android v3.x\n\n```\ncordova plugin add cordova-plugin-crosswalk-certificate@1.0.0\n```\n\nTo use this plugin with cordova-android 4.x install v2.x, which is compatbile with the new [pluggable crosswalk webview](https://crosswalk-project.org/documentation/cordova/cordova_4.html)\n```\ncordova plugin add cordova-plugin-crosswalk-certificate@2.0.0\n```\n\nYou can install the latest build directly from git:\n```\ncordova plugin add https://github.com/danjarvis/cordova-plugin-crosswalk-certificate\n```\n\n## Usage\n\nActivate insecure certificates\n```\ncordova.plugins.certificates.trustUnsecureCerts(true);\n```\n\nDectivate insecure certificates\n```\ncordova.plugins.certificates.trustUnsecureCerts(false);\n```\n\n## Development\n\n### Running integration tests\n\nexecute the `runIntegrationTests.sh` script for a specific platform:\n\n```\nPLATFORM='android' ./runIntegrationTests.sh\n```\n\n```\nPLATFORM='ios' ./runIntegrationTests.sh\n```\n\n",
+  "readmeFilename": "README.md",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/danjarvis/cordova-plugin-crosswalk-certificate.git"
+  },
+  "version": "2.0.1"
+}

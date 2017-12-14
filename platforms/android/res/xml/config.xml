@@ -24,6 +24,9 @@
         <param name="android-package" value="org.apache.cordova.whitelist.WhitelistPlugin" />
         <param name="onload" value="true" />
     </feature>
+    <feature name="CertificatesPlugin">
+        <param name="android-package" value="com.danjarvis.cordova.plugins.CertificatesPlugin" />
+    </feature>
     <feature name="Keyboard">
         <param name="android-package" onload="true" value="org.apache.cordova.labs.keyboard.Keyboard" />
     </feature>
@@ -49,5 +52,11 @@
     <allow-intent href="market:*" />
     <icon src="www/img/e-venement.png" />
     <preference name="loglevel" value="DEBUG" />
+    <preference name="webView" value="org.crosswalk.engine.XWalkWebViewEngine" />
+    <preference name="xwalkVersion" value="23+" />
+    <preference name="xwalkLiteVersion" value="xwalk_core_library_canary:17+" />
+    <preference name="xwalkCommandLine" value="--disable-pull-to-refresh-effect" />
+    <preference name="xwalkMode" value="embedded" />
+    <preference name="xwalkMultipleApk" value="true" />
     <preference name="android-minSdkVersion" value="18" />
 </widget>

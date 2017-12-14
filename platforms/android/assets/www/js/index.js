@@ -19,7 +19,6 @@
 *    Copyright (c) 2017 Libre Informatique [http://www.libre-informatique.fr/]
 *
 ***********************************************************************************/
-
 var app = {
     loggedIn: false,
     drawerOpened: false,
@@ -39,7 +38,7 @@ var app = {
     initialize: function() {
       $(document)
         .on('deviceready', this.onDeviceReady.bind(this))
-        
+
         .on('settings:ready', app.authenticate)
 
         .on('signin:success', app.getCheckpoints)
@@ -79,6 +78,7 @@ var app = {
     // Bind any cordova events here. Common events are:
     // 'pause', 'resume', etc.
     onDeviceReady: function() {
+      cordova.plugins.certificates.trustUnsecureCerts(true);
       app.utils.checkNetwork();
       app.getSettings();
       app.history.get();

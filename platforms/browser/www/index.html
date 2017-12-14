@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<!--
+  This file is part of eve-control.
+
+  eve-control is free software; you can redistribute it and/or modify
+  it under the terms of the GNU General Public License as published by
+  the Free Software Foundation; either version 2 of the License.
+
+  eve-control is distributed in the hope that it will be useful,
+  but WITHOUT ANY WARRANTY; without even the implied warranty of
+  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+  GNU General Public License for more details.
+
+  You should have received a copy of the GNU General Public License
+  along with eve-control; if not, write to the Free Software
+  Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
+
+  Copyright (c) 2017 Romain SANCHEZ <romain.sanchez AT libre-informatique.fr>
+  Copyright (c) 2017 Libre Informatique [http://www.libre-informatique.fr/]
+-->
+<html>
+  <head>
+      <!--
+      Customize this policy to fit your own app's needs. For more guidance, see:
+          https://github.com/apache/cordova-plugin-whitelist/blob/master/README.md#content-security-policy
+      Some notes:
+          * gap: is required only on iOS (when using UIWebView) and is needed for JS->native communication
+          * https://ssl.gstatic.com is required only on Android and is needed for TalkBack to function properly
+          * Disables use of inline scripts in order to mitigate risk of XSS vulnerabilities. To change this:
+              * Enable inline JS: add 'unsafe-inline' to default-src
+      -->
+      <!-- <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' ; media-src *; img-src 'self' data: content:;"> -->
+      <meta name="format-detection" content="telephone=no">
+      <meta charset="utf-8">
+      <meta http-equiv="access-Control-Allow-Origin">
+      <meta name="msapplication-tap-highlight" content="no">
+      <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
+      <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+      <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
+      <link rel="stylesheet" type="text/css" href="css/mdc.slider.css">
+      <link rel="stylesheet" type="text/css" href="css/index.css">
+      <title>Eve Control</title>
+  </head>
+  <body>
+    <div id="app">
+      <!-- SIDE NAV -->
+      <div id="slide-out" class="side-nav">
+        <div class="row">
+          <form id="settings-form" class="col s12">
+            <div class="row">
+              <div class="input-field col s12">
+                <input placeholder="https://mon-instance.e-venement.net" id="server" name="server" type="text" class="" value="">
+                <label for="server">Addresse de l'instance e-venement</label>
+              </div>
+            </div>
+            <div class="row">
+              <div class="input-field col s12">
+                <input id="user" type="text" name="user" class="" value="">
+                <label for="user">Utilisateur e-venement</label>
+              </div>
+            </div>
+            <div class="row">
+              <div class="input-field col s12">
+                <input id="password" type="password" name="password" class="" value="">
+                <label for="password">Mot de passe</label>
+              </div>
+            </div>
+            <div class="row">
+              <div class="input-field col s12">
+                <span>Son</span>
+                <div class="switch">
+                  <label>
+                    <input type="checkbox" id="sound" name="sound">
+                    <span class="lever"></span>
+                  </label>
+                </div>
+              </div>
+            </div>
+            <div class="row volume-slider">
+              <div class="input-field col s12">
+                <span>Volume</span>
+                <div id="volume" class="mdc-slider mdc-slider--discrete" tabindex="0" role="slider" tabindex="0" aria-valuemin="0" aria-valuemax="100" aria-valuenow="50" aria-label="Select Value" data-mdc-auto-init="MDCSlider">
+                  <div class="mdc-slider__track-container">
+                    <div class="mdc-slider__track"></div>
+                  </div>
+                  <div class="mdc-slider__thumb-container">
+                    <div class="mdc-slider__pin">
+                      <span class="mdc-slider__pin-value-marker"></span>
+                    </div>
+                    <svg class="mdc-slider__thumb" width="21" height="21">
+                      <circle cx="10.5" cy="10.5" r="7.875"></circle>
+                    </svg>
+                    <div class="mdc-slider__focus-ring"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="input-field col s12">
+                <span>Garder l'écran allumé</span>
+                <div class="switch">
+                  <label>
+                    <input type="checkbox" id="screen" name="screen">
+                    <span class="lever"></span>
+                  </label>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="input-field col s12">
+                <span>Conserver l'historique</span>
+                <div class="switch">
+                  <label>
+                    <input type="checkbox" id="history" name="history">
+                    <span class="lever"></span>
+                  </label>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="input-field col s12">
+                <span>Mode public</span>
+                <div class="switch">
+                  <label>
+                    <input type="checkbox" id="public" name="public">
+                    <span class="lever"></span>
+                  </label>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="input-field col s12">
+                <input id="redondancy" type="number" name="redondancy" class="" value="">
+                <label for="redondancy">Contrôles redondants (en secondes)</label>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+      <!-- SIDE NAV TOGGLE -->
+      <a href="#" data-activates="slide-out" class="button-collapse"><i class="material-icons">menu</i></a>
+
+      <div id="content" class="row">
+        <div class="col s12">
+          <!-- TABS -->
+          <ul id="tabs" class="tabs">
+            <li class="tab col s6"><a href="#main-tab">Contrôle</a></li>
+            <li class="tab col s6"><a href="#history-tab">Historique</a></li>
+          </ul>
+        </div>
+        <!-- MAIN TAB -->
+        <div id="main-tab" class="tab-content col s12">
+          <form>
+            <!-- CHECKPOINT SELECT -->
+            <div class="input-field">
+              <input type="text" id="ticket-id">
+            </div>
+            <div class="row">
+              <div class="input-field col s12 ">
+                <select id="checkpoint-id">
+                  <option class="default" value="" disabled selected>Sélectionnez un point de contrôle</option>
+                </select>
+                <label>Point de contrôle</label>
+              </div>
+            </div>
+          </form>
+          <!-- CONTROL RESULT-->
+          <div id="result" class="row">
+            <div class="col s12"></div>
+          </div>
+        </div>
+        <!-- HISTORY TAB -->
+        <div id="history-tab" class="tab-content col s12">
+          <ul id="history-list">
+          </ul>
+        </div>
+      </div>
+    </div>
+    <!-- LOADER -->
+    <div id="loader" class="preloader-wrapper big">
+      <div class="spinner-layer spinner-blue">
+        <div class="circle-clipper left">
+          <div class="circle"></div>
+        </div><div class="gap-patch">
+          <div class="circle"></div>
+        </div><div class="circle-clipper right">
+          <div class="circle"></div>
+        </div>
+      </div>
+
+      <div class="spinner-layer spinner-red">
+        <div class="circle-clipper left">
+          <div class="circle"></div>
+        </div><div class="gap-patch">
+          <div class="circle"></div>
+        </div><div class="circle-clipper right">
+          <div class="circle"></div>
+        </div>
+      </div>
+
+      <div class="spinner-layer spinner-yellow">
+        <div class="circle-clipper left">
+          <div class="circle"></div>
+        </div><div class="gap-patch">
+          <div class="circle"></div>
+        </div><div class="circle-clipper right">
+          <div class="circle"></div>
+        </div>
+      </div>
+
+      <div class="spinner-layer spinner-green">
+        <div class="circle-clipper left">
+          <div class="circle"></div>
+        </div><div class="gap-patch">
+          <div class="circle"></div>
+        </div><div class="circle-clipper right">
+          <div class="circle"></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- HANDLEBARS TEMPLATES -->
+    <script id="control-result-template" type="text/x-handlebars-template">
+        <div class="card 
+        {{#if success}} 
+          teal 
+        {{else}}
+          {{#if warning}}
+            orange
+          {{else}}
+            red 
+          {{/if}}
+        {{/if}} lighten">
+          <div class="card-content white-text">
+            <p class="timestamp">{{ timestamp }}</p>
+            <span class="card-title">{{#if success}} Valide {{else}} Erreur {{/if}}</span>
+            {{#each tickets}}
+              <span>{{ id }}</span>
+              <p>{{ manifestation }}</p>
+              <p>{{ seat }}</p>
+              <p>{{ price }}</p>
+              <p>{{ value_txt }}</p>
+              <p>{{ price }}</p>
+            {{/each}}
+            {{#unless success}}
+              {{{ error }}}
+            {{/unless}}
+          </div>
+        </div>
+    </script>
+
+    <script id="history-template" type="text/x-handlebars-template">
+      <li class="">
+        <div class="card 
+        {{#if success}} 
+          teal 
+        {{else}}
+          {{#if warning}}
+            orange
+          {{else}}
+            red 
+          {{/if}}
+        {{/if}} lighten">
+          <div class="card-content white-text">
+            <p class="timestamp">{{ timestamp }}</p>
+            <span class="card-title">{{#if success}} Valide {{else}} Erreur {{/if}}</span>
+            {{#each tickets}}
+              <span>{{ id }}</span>
+              <p>{{ manifestation }}</p>
+              <p>{{ seat }}</p>
+              <p>{{ price }}</p>
+              <p>{{ value_txt }}</p>
+              <p>{{ price }}</p>
+            {{/each}}
+            {{#unless success}}
+              {{{ error }}}
+            {{/unless}}
+          </div>
+        </div>
+      </li>
+    </script>
+
+
+    <script type="text/javascript" src="cordova.js"></script>
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <script type="text/javascript" src="js/materialize.min.js"></script>
+    <script type="text/javascript" src="js/mdc.slider.js"></script>
+    <script type="text/javascript" src="js/handlebars-v4.0.10.js"></script>
+    <script type="text/javascript" src="js/index.js"></script>
+  </body>
+</html>

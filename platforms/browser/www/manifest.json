@@ -1,0 +1,11 @@
+{
+  "background_color": "#FFF",
+  "display": "standalone",
+  "name": "Eve-control",
+  "short_name": "Eve-control",
+  "version": "fr.librinfo.evecontrol2",
+  "description": "Control your e-venement tickets from your android device",
+  "author": "Romain Sanchez",
+  "icons": [],
+  "start_url": "index.html"
+}
